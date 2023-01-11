@@ -4,10 +4,11 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import headerImg from '../Assets/img/header-img.svg';
 
+
 function Banner() {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = ["web developer", "web designer", "Ui/Ux designer"];
+    const toRotate = ["Web developer", "Web designer", "UI/UX designer"];
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() *100);
     const period = 2000;
@@ -42,14 +43,13 @@ function Banner() {
     }
 
     return (
-        <div>
             <section className='banner' id='home'>
                 <Container>
                     <Row className='align-item-center'>
                         <Col xs={12} md={6} xl={7}>
                             <span className='tagline'>Welcome to My Portfolio</span>
-                            <h1>{` Hii I am web coded `} <span className='wrap'>{text}</span></h1>
-                            <p> My name is Prashant Maurya a great Web developer Learning new things</p>
+                            <h1>{` Hii I am Full Stack `} <span className='wrap'>{text}</span></h1>
+                            <p> My name is Prashant Maurya a great Web developer Learning new things. I’ve always been passionate about learning and challenging myself to grow and find solutions to problems where it seems like there are none. I find extreme joy in filling in gaps and creating ways to better people's lives and now, with software development I have found something that I can pour into and know that no matter how difficult it may be at times it's worth it.</p>
                             <button onClick={() => console.log('connect')}>Let's connect <ArrowRightCircle size={25} /> </button>
                         </Col>
                         <Col xs={12} md={6} xl={5}>
@@ -58,7 +58,6 @@ function Banner() {
                     </Row>
                 </Container>
             </section>
-        </div>
     )
 }
 
